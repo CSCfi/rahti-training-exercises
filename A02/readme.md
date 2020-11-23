@@ -6,7 +6,7 @@ In this exercise we will deploy a Python template that uses Source2Image. We wil
 
 <https://github.com/CSCfi/rahti-flask-hello.git>
 
-* First, go to Gihub and fork the repository into your personal space.
+* First, go to Github and fork the repository into your personal space.
 
 ![Rahti flask hello](img/rahti-flask-hello.png)
 

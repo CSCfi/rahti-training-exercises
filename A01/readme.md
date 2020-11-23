@@ -9,4 +9,3 @@ In this exercise we will just log in Rahti and create a project. This project wi
 ![course-training-number](img/new-project.png)
 
 **Note**: Add "CSC_project: 2001316" as description of your rahti project.
-

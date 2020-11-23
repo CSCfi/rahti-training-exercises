@@ -4,9 +4,9 @@
 
 In this exercise we will add configuration to the application.
 
-## Using enviroment variables
+## Using environment variables
 
-One simple way of configuring application is using enviroment variables.
+One simple way of configuring application is using environment variables.
 
 * Go to the environment page of the Deployment and add a variable called *DEBUG* with the content _True_.
 

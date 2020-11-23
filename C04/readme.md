@@ -2,7 +2,7 @@
 
 > Pre-requisites, the project created in *[Exercise 1](/exercises/A01/index.html)*
 
-In this exercise we want to setup a Readiness (when the aplication has finished starting) and a Liveness (when the application is still alive and well) probe.
+In this exercise we want to setup a Readiness (when the application has finished starting) and a Liveness (when the application is still alive and well) probe.
 
 * Create the following Pod:
 
@@ -30,7 +30,7 @@ spec:
       done
 </code></pre>
 
-Upon startup, the pod waits for 30 seconds, then creates inside the container a file called `/tmp/alive`, then waits again for 30 seconds and proceeds to delete the file. Afterwards it starts again, and keeps doing so in an infinite loop.
+Upon start-up, the pod waits for 30 seconds, then creates inside the container a file called `/tmp/alive`, then waits again for 30 seconds and proceeds to delete the file. Afterwards it starts again, and keeps doing so in an infinite loop.
 
 * Edit the specification so that the container is "ready" and "live" only if
   the file `/tmp/alive` exists.

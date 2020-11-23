@@ -2,7 +2,7 @@
 
 > Pre-requisites, the application created in [Exercise 2](/exercises/A02/index.html)
 
-In this exercise we will change the background color of the application pages, from silver to beige (or any other color you may like better).
+In this exercise we will change the background colour of the application pages, from silver to beige (or any other colour you may like better).
 
 * First edit the file `app.py` of your fork of the repository. Change the word silver to beige in the CSS.
 

@@ -14,10 +14,10 @@ In this exercise we will use the web interface to explore the application create
 
 ![Overview](img/overview.png)
 
-* From the webinterface, open a terminal to the running application and run few commands:
+* From the web interface, open a terminal to the running application and run few commands:
     * `ps x`
     * `cat /etc/os-release`
 
 ![terminal](img/terminal.png)
 
-* Check the application logs, what information can you see? Can you see the log entry of the visit you made in the previuous exercise?
+* Check the application logs, what information can you see? Can you see the log entry of the visit you made in the previous exercise?
