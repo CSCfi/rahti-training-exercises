@@ -4,7 +4,16 @@
 
 In this exercise we will change the background colour of the application pages, from silver to beige (or any other colour you may like better).
 
-* First edit the file `app.py` of your fork of the repository. Change the word silver to beige in the CSS.
+* First edit the file `app.py` of your fork of the repository. Change the word silver to beige in the CSS. Remove the comment above the background-color entry.
+
+<pre><code>body {
+  # CHANGE background color from 'silver' to 'beige'
+  background-color: silver;
+  font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
+  font-size: 14px;
+  padding: 10%;
+}
+</code></pre>
 
 * Secondly, launch a new build.
 

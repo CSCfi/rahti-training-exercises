@@ -1,0 +1,45 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Liveness and Readiness probes</h1>
+<blockquote>
+<p>Pre-requisites, the project created in <em><a href="/exercises/A01/index.html">Exercise 1</a></em></p>
+</blockquote>
+<p>In this exercise we want to setup a Readiness (when the application has finished starting) and a Liveness (when the application is still alive and well) probe.</p>
+<ul>
+<li>Create the following Pod:</li>
+</ul>
+<p><em>probe.yaml</em>
+<pre><code>kind: Pod
+apiVersion: v1
+metadata:
+  name: probe-tests
+spec:
+  containers:
+  - name: probe-test-container
+    image: centos:7
+    command:
+    - sh
+    - -c
+    - &gt;
+      while true; do
+        echo "Waiting for 30 seconds to go live"
+        for i in {1..30}; do echo "."; sleep 1; done
+        touch /tmp/alive
+        echo "Now waiting for 30 seconds to go to sleep"
+        for i in {1..30}; do echo "."; sleep 1; done
+        rm /tmp/alive
+        echo "Going to sleep"
+      done
+</code></pre></p>
+<p>Upon start-up, the pod waits for 30 seconds, then creates inside the container a file called <code>/tmp/alive</code>, then waits again for 30 seconds and proceeds to delete the file. Afterwards it starts again, and keeps doing so in an infinite loop.</p>
+<ul>
+<li>Edit the specification so that the container is "ready" and "live" only if
+  the file <code>/tmp/alive</code> exists.</li>
+<li>Wait for 30 seconds before starting to check if the container is live.</li>
+<li>Try what happens if the liveness probing starts immediately when the container is started?</li>
+</ul>
+<p><em>Tip #1</em>: Go to Monitoring page on the Application Console to see the status of
+your pod.</p>
+<p><em>Tip #2</em>: You can monitor the pod with <code>watch oc describe pod probe-tests</code> or
+<code>watch oc get pod probe-tests</code></p>
+<p><em>Tip #3</em>: The GNU coreutils tool <em><code>cat &lt;filename&gt;</code></em> returns 0 if the
+<code>&lt;filename&gt;</code> exists and everything went fine.</p>

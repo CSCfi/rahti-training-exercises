@@ -1,0 +1,36 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Add configuration python application</h1>
+<blockquote>
+<p>Pre-requisites, the application created in <a href="/exercises/A02/index.html">Exercise 2</a></p>
+</blockquote>
+<p>In this exercise we will add configuration to the application.</p>
+<h2>Using environment variables</h2>
+<p>One simple way of configuring application is using environment variables.</p>
+<ul>
+<li>Go to the environment page of the Deployment and add a variable called <em>DEBUG</em> with the content <em>True</em>.</li>
+</ul>
+<p><img alt="Environment" src="img/environment.png" /></p>
+<ul>
+<li>Go now to the logs and check that indeed the DEBUG was activated.</li>
+</ul>
+<h2>Using a configmap</h2>
+<p>In this section, we will use a config map to create a config file.</p>
+<ul>
+<li>Create a configmap, the Key should is the name of the file (config.json), and the content:</li>
+</ul>
+<p><em>config.json</em>:
+<pre><code>{
+  "student": "??????",
+  "debug": true
+}
+</code></pre></p>
+<p>Replace the question marks with your name.</p>
+<p><img alt="ConfigMap" src="img/configmap.png" /></p>
+<ul>
+<li>
+<p>From the deployment configuration page, use the "Add Config Files" option. Mount the config map you just created and mount it in <code>/etc/flask</code>.</p>
+</li>
+<li>
+<p>Check your application</p>
+</li>
+</ul>

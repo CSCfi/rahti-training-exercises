@@ -1,0 +1,29 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Create Service and Route</h1>
+<blockquote>
+<p>Pre-requisites, the Pod created in <em><a href="/exercises/B03/index.html">Exercise 3</a></em></p>
+</blockquote>
+<p>In this exercise we will make the pod accessible to the whole Internet, using a HTTPS URL.</p>
+<h2>Create a Service</h2>
+<ul>
+<li>
+<p>From the 'Application console', create a service called <a href="/exercises/B04/hello-service.yaml">hello-service</a> that load balances the Pod from exercise 2.</p>
+</li>
+<li>
+<p>From the 'Application console':</p>
+<ul>
+<li>Check that the selector is <code>app=hello-pod</code></li>
+<li>Check the IP of the service (it should begin by <code>172</code>)</li>
+<li>Check the list of Pods, you should see the Pod created in Exercise 2.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Advanced</strong>: Try to understand what is what links this Service with this Pod.</p>
+<h2>Create a Route</h2>
+<ul>
+<li>From the Application console, create a Route using the form. User the Service create in the previous step (Should be only available anyway), make the route secure (HTTPS), and let Rahti choose the Host-name URL.<ul>
+<li>Check which host-name URL was auto generated and using the browser, go to that URL.</li>
+<li>Go back to the Pod's log and see if your visit has been logged.</li>
+</ul>
+</li>
+</ul>

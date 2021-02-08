@@ -1,0 +1,22 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Execute a container in a pod</h1>
+<blockquote>
+<p>Pre-requisites, the project created in <em><a href="/exercises/01-login-auth-project">Exercise 1</a></em></p>
+</blockquote>
+<p>In this exercise we will launch a simple container that will just say hello when asked at port 8888 using HTTP.</p>
+<h2>Launch a POD</h2>
+<p><img alt="openshift/hello-openshift" src="img/hello-openshift.png" /></p>
+<ul>
+<li>
+<p>From the 'Application console', run the image <a href="https://hub.docker.com/r/openshift/hello-openshift"><code>openshift/hello-openshift</code></a>* in a pod called <a href="/exercises/B03/hello-world-pod.yaml">hello-pod</a>.</p>
+</li>
+<li>
+<p>From the 'Application console':</p>
+<ul>
+<li>get the status of the pod, it must be "Running"</li>
+<li>get the IP of the pod (it should begin by <code>10</code>)</li>
+<li>and the standard output of the container, it must be saying that is listening to ports <code>8888</code> and <code>8080</code>.</li>
+</ul>
+</li>
+</ul>
+<p>* Also cached in <code>docker-registry.rahti.csc.fi/cscfi/hello-openshift:latest</code>.</p>

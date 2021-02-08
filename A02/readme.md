@@ -10,7 +10,7 @@ In this exercise we will deploy a Python template that uses Source2Image. We wil
 
 ![Rahti flask hello](img/rahti-flask-hello.png)
 
-* Secondly, go to Rahti and create a Python 3.6 application, using your forked repository.
-    * Name the application `Python-sample-<number>`, where `<number>` is the number in your training account.
+* Secondly, go to Rahti and create a Python `3.8-quay` application, using your forked repository.`
+    * Name the application `python-sample-<number>`, where `<number>` is the number in your training account.
 
 * Once the application is up and running, find the URL where it is available to the internet, and visit it.

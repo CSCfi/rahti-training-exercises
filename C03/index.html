@@ -1,0 +1,14 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Out of memory killer</h1>
+<blockquote>
+<p>Pre-requisites, the project created in <em><a href="/exercises/A01/index.html">Exercise 1</a></em></p>
+</blockquote>
+<p>In this exercise we will trigger the Out of Memory (OOM) killer.</p>
+<ul>
+<li>
+<p>From the <code>Add to Project &gt; Deploy Image</code>, create a deployment that runs the image called <code>lvarin/oom-killer</code>. That image contains a python code, listed in <code>app/app.py</code> file, that reserves 10MB every second.</p>
+</li>
+<li>
+<p>Make sure that the container gets killed when it reserves over 50MB of memory. What is the status of the Pod?</p>
+</li>
+</ul>

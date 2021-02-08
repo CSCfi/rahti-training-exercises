@@ -6,7 +6,7 @@ In this exercise we will make the pod accessible to the whole Internet, using a 
 
 ## Create a Service
 
-* From the 'Application console', create a service called [hello-service](/exercises/03-navigate/hello-service.yaml) that load balances the Pod from exercise 2.
+* From the 'Application console', create a service called [hello-service](/exercises/B04/hello-service.yaml) that load balances the Pod from exercise 2.
 
 * From the 'Application console':
     * Check that the selector is `app=hello-pod`

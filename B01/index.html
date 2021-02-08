@@ -1,0 +1,31 @@
+<head><link rel="stylesheet" href="/exercises/style.css"></head> <div class="footer"><img class=logo  src=https://www.csc.fi/documents/10180/152246/CSC-logo.png alt=CSC/></div>
+<h1>Add persistent storage python application</h1>
+<blockquote>
+<p>Pre-requisites, the application created in <a href="/exercises/A02/index.html">Exercise 2</a></p>
+</blockquote>
+<p>In this exercise we will add persistent storage to the application.</p>
+<ul>
+<li>Go to the 'Application Console' Storage section and create a 1 GiB volume.</li>
+</ul>
+<p><img alt="storage" src="img/storage.png" /></p>
+<ul>
+<li>
+<p>Back in the deployment page, use the "Add storage" page to mount the volume you just created to the <code>/static</code> folder.</p>
+</li>
+<li>
+<p>Use the web interface terminal to down load a JPG photo to the volume. (There are other ways to upload data to a volume, but that is a topic for another time)</p>
+</li>
+</ul>
+<pre><code>wget https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Juvenile_Ragdoll.jpg/1280px-Juvenile_Ragdoll.jpg \
+    -O /static/1280px-Juvenile_Ragdoll.jpg
+</code></pre>
+
+<p><img alt="terminal" src="/exercises/A03/img/terminal.png" /></p>
+<ul>
+<li>
+<p>Go back to the application and check if you can see the photo you downloaded.</p>
+</li>
+<li>
+<p>Delete the running Pod, wait till it is recreated. If you reload the page that shows the photos, it should be still be displayed.</p>
+</li>
+</ul>
